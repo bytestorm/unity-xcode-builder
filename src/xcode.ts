@@ -677,11 +677,6 @@ export async function ArchiveXcodeProject(projectRef: XcodeProject): Promise<Xco
             `EXPANDED_CODE_SIGN_IDENTITY=${manualSigningIdentity}`,
             `OTHER_CODE_SIGN_FLAGS=--keychain ${keychainPath}`
         );
-    } else {
-        archiveArgs.push(
-            `CODE_SIGN_IDENTITY=-`,
-            `EXPANDED_CODE_SIGN_IDENTITY=-`
-        );
     }
 
     archiveArgs.push(
